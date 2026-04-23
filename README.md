@@ -29,7 +29,7 @@ The API is ready to integrate with any frontend like React, Angular, or mobile a
 
 ## 📁 Project Structure
 
-'ecommerce-backend/'
+'''ecommerce-backend/'''
 ├── src/
 │   ├── main/
 │   │   ├── java/com/anjali/ecommerce/
@@ -46,7 +46,7 @@ The API is ready to integrate with any frontend like React, Angular, or mobile a
 │   │       ├── http://application.properties        # Server port, DB config, H2 console settings
 │   │       └── http://data.sql                      # Initial test data - 3 products auto-loaded
 │   └── test/
-└── 'http://pom.xml'                                   # Maven dependencies and build config
+└── '''http://pom.xml'''                                   # Maven dependencies and build config
 
 ## ⚙️ Getting Started
 
