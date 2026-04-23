@@ -28,25 +28,29 @@ The API is ready to integrate with any frontend like React, Angular, or mobile a
 | **Lombok** | 1.18.30 | Reduces boilerplate code |
 
 ## 📁 Project Structure
+## 📁 Project Structure
 
-'''ecommerce-backend/'''
+<pre>
+ecommerce-backend/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/anjali/ecommerce/
 │   │   │   ├── controller/
-│   │   │   │   └── http://ProductController.java    # REST endpoints - handles HTTP requests
+│   │   │   │   └── ProductController.java    # REST endpoints
 │   │   │   ├── entity/
-│   │   │   │   └── http://Product.java              # JPA entity - maps to database table
+│   │   │   │   └── Product.java              # JPA entity
 │   │   │   ├── repository/
-│   │   │   │   └── http://ProductRepository.java    # Data access layer - extends JpaRepository
+│   │   │   │   └── ProductRepository.java    # Data access layer
 │   │   │   ├── service/
-│   │   │   │   └── http://ProductService.java       # Business logic layer
-│   │   │   └── http://EcommerceBackendApplication.java  # Main class with @SpringBootApplication
+│   │   │   │   └── ProductService.java       # Business logic
+│   │   │   └── EcommerceBackendApplication.java  # Main class
 │   │   └── resources/
-│   │       ├── http://application.properties        # Server port, DB config, H2 console settings
-│   │       └── http://data.sql                      # Initial test data - 3 products auto-loaded
+│   │       ├── application.properties        # Server config
+│   │       └── data.sql                      # Initial test data
 │   └── test/
-└── '''http://pom.xml'''                                   # Maven dependencies and build config
+└── pom.xml                                   # Maven dependencies
+</pre>
+
 
 ## ⚙️ Getting Started
 
