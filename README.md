@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# E-Commerce Backend - Spring Boot REST API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A complete backend REST API for an e-commerce application built using Spring Boot with layered architecture. This project handles product management with full CRUD support and uses an in-memory H2 database for easy setup. Built following industry best practices with Controller → Service → Repository → Entity layers.
 
-## Available Scripts
+The API is ready to integrate with any frontend like React, Angular, or mobile apps. Perfect for learning Spring Boot fundamentals or as a starter template for larger e-commerce projects.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Layered Architecture**: Clean separation using Controller → Service → Repository → Entity pattern
+- **RESTful API**: GET endpoint for fetching all products with JSON response
+- **In-Memory Database**: H2 database with automatic schema generation and test data loading from data.sql
+- **Spring Data JPA**: Simplified database operations without boilerplate code
+- **Maven Build**: Easy dependency management and project builds
+- **Auto Configuration**: Spring Boot handles server, database, and dependency setup automatically
+- **Lombok Integration**: Reduces boilerplate with @Data, @NoArgsConstructor annotations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Technology | Version | Purpose |
+| --- | --- | --- |
+| **Java** | 17 | Core programming language |
+| **Spring Boot** | 3.2.0 | Application framework |
+| **Spring Web** | 3.2.0 | REST API development |
+| **Spring Data JPA** | 3.2.0 | Database abstraction layer |
+| **H2 Database** | Runtime | In-memory database for development |
+| **Maven** | 3.9+ | Build and dependency management |
+| **Lombok** | 1.18.30 | Reduces boilerplate code |
 
-### `npm test`
+## 📁 Project Structure
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<pre>
+ecommerce-backend/
+├── src/
+│   ├── main/
+│   │   ├── java/com/anjali/ecommerce/
+│   │   │   ├── controller/
+│   │   │   │   └── ProductController.java    # REST endpoints
+│   │   │   ├── entity/
+│   │   │   │   └── Product.java              # JPA entity
+│   │   │   ├── repository/
+│   │   │   │   └── ProductRepository.java    # Data access layer
+│   │   │   ├── service/
+│   │   │   │   └── ProductService.java       # Business logic
+│   │   │   └── EcommerceBackendApplication.java  # Main class
+│   │   └── resources/
+│   │       ├── application.properties        # Server config
+│   │       └── data.sql                      # Initial test data
+│   └── test/
+└── pom.xml                                   # Maven dependencies
+</pre>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Java 17 or higher installed
+- Maven 3.6+ installed or use included Maven wrapper
+- Git installed
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation & Run
 
-### `npm run eject`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/PentanglaAnjali/e-commerce-backend-springboot.git
+   cd e-commerce-backend-springboot/ecommerce-backend
+Run the application
+   mvn spring-boot:run
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Or using Maven wrapper:
+   ./mvnw spring-boot:run
+Application starts on: 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📡 API Endpoints
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Get All Products
+URL: 
+Method: 
+Description: Retrieves all products from the database
+Success Response:
+  [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "High performance laptop",
+      "price": 999.99
+    },
+    {
+      "id": 2,
+      "name": "Smartphone", 
+      "description": "Latest model smartphone",
+      "price": 699.99
+    },
+    {
+      "id": 3,
+      "name": "Headphones",
+      "description": "Noise-cancelling headphones", 
+      "price": 199.99
+    }
+  ]
+Test in Browser
+Open: 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Test with cURL
+curl http://localhost:8080/api/products
+🗄️ Database
 
-## Learn More
+This project uses H2 in-memory database for zero-config setup. Tables are auto-created and data is loaded from  on startup.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Access H2 Console (Optional):
+URL: 
+JDBC URL: 
+Username: 
+Password: (leave empty)
+Click "Connect"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔮 Future Enhancements
 
-### Code Splitting
+[ ] POST  - Add new product
+[ ] GET  - Get product by ID  
+[ ] PUT  - Update product
+[ ] DELETE  - Delete product
+[ ] Switch to MySQL/PostgreSQL for production
+[ ] Add Spring Security with JWT authentication
+[ ] Implement pagination and sorting for products
+[ ] Add Swagger/OpenAPI documentation
+[ ] Add global exception handling
+[ ] Unit and integration tests with JUnit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👩‍💻 Author
+Anjali Pantangi
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
