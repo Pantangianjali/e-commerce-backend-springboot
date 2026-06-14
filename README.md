@@ -1,4 +1,4 @@
-Got it. Here's the full README - copy everything below:
+
 # E-Commerce Backend - Spring Boot REST API
 
 A complete backend REST API for an e-commerce application built using Spring Boot with layered architecture. This project handles product management with full CRUD support and uses an in-memory H2 database for easy setup. Built following industry best practices with Controller → Service → Repository → Entity layers.
